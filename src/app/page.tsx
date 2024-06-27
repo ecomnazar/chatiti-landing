@@ -7,7 +7,46 @@ import { Title } from "@/shared/ui/Title";
 import Image from "next/image";
 
 export default function Home() {
+
+
   const arrayOfText = ['☕️  чат с психологом', '🏃🏻‍♀️  тренировка для похудения', '🍜️  рецепты и план питания ', '💸  личный коуч', '💘️  отношения и советы ']
+
+  const instructors = [
+    {
+      description: "ИИ психолог онлайн, чат - попробуй бесплатно, круглосуточно и анонимно",
+      role: "Психолог",
+      image: "/person-1.png"
+    },
+    {
+      description: "ИИ психолог онлайн, чат - попробуй бесплатно, круглосуточно и анонимно",
+      role: "Психолог",
+      image: "/person-1.png"
+    },
+    {
+      description: "ИИ психолог онлайн, чат - попробуй бесплатно, круглосуточно и анонимно",
+      role: "Психолог",
+      image: "/person-1.png"
+    }, {
+      description: "ИИ психолог онлайн, чат - попробуй бесплатно, круглосуточно и анонимно",
+      role: "Психолог",
+      image: "/person-1.png"
+    },
+    {
+      description: "ИИ психолог онлайн, чат - попробуй бесплатно, круглосуточно и анонимно",
+      role: "Психолог",
+      image: "/person-1.png"
+    },
+    {
+      description: "ИИ психолог онлайн, чат - попробуй бесплатно, круглосуточно и анонимно",
+      role: "Психолог",
+      image: "/person-1.png"
+    },
+    {
+      description: "ИИ психолог онлайн, чат - попробуй бесплатно, круглосуточно и анонимно",
+      role: "Психолог",
+      image: "/person-1.png"
+    }
+  ]
 
   return (
     <>
@@ -121,16 +160,16 @@ export default function Home() {
         <section className="mt-[30px] sm:mt-[66px]">
           <Container>
             <Title title="Это лишь часть твоей личной команды:" className="text-center mb-[30px] sm:mb-9" />
-            <div className="sm:px-[70px] grid grid-cols-1 md:grid-cols-2 gap-x-[20px] lg:gap-x-[76px] gap-y-[15px] sm:gap-y-[30px]">
-              {Array.from({ length: 8 }).map((_, index) => {
+            <div className="sm:px-[40px] lg:px-[70px] grid grid-cols-1 md:grid-cols-2 gap-x-[20px] lg:gap-x-[76px] gap-y-[15px] sm:gap-y-[30px]">
+              {instructors.map((instructor, index) => {
                 return <FadeAnimation key={index}>
                   <div className="w-[260px] mx-auto bg-secondary h-[89px] sm:h-[112px] sm:w-full rounded-[21px] pt-[11px] sm:pt-5 pl-5 pr-[55px] relative overflow-hidden">
-                    <p className="max-w-[210px] text-[12px] sm:text-[14px] font-normal font-opensans text-[#F4E7D9]">ИИ психолог онлайн, чат - попробуй бесплатно, круглосуточно и анонимно</p>
-                    <div className="w-[140px] h-[19px] bg-primary rounded-t-[10px] absolute bottom-0 left-1/2 -translate-x-1/2 text-[12px] font-semibold font-inter text-secondary flex items-center justify-center">Психолог</div>
+                    <p className="max-w-[210px] text-[12px] sm:text-[14px] font-normal font-opensans text-[#F4E7D9]">{instructor.description}</p>
+                    <div className="w-[140px] h-[19px] bg-primary rounded-t-[10px] absolute bottom-0 left-1/2 -translate-x-1/2 text-[12px] font-semibold font-inter text-secondary flex items-center justify-center">{instructor.role}</div>
                     <div className="w-[63px] h-[112px] absolute -right-[20px] sm:right-0 top-1/2 -translate-y-1/2 sm:translate-y-0 sm:top-0">
                       <Image src={'/right-rounded.svg'} fill alt="Right" />
                       <div className="h-[50px] w-[50px] sm:w-[75px] sm:h-[75px] absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[35%]">
-                        <Image src={'/person-1.png'} fill alt="Person" />
+                        <Image src={instructor.image} fill alt="Person" />
                       </div>
                     </div>
                   </div>
@@ -160,16 +199,18 @@ export default function Home() {
       <footer className="mt-[52px] bg-primary pb-[17px]">
         <Container>
           <div className="max-w-[320px] mx-auto relative pt-[30px]">
-            <ul className="space-y-1 mb-[46px]">
-              <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="">Правовая информация</a></li></FadeAnimation>
-              <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="">Политика конфиденциальности</a></li></FadeAnimation>
-              <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="">Обратная связь</a></li></FadeAnimation>
-              <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="">Соискателям & Инвесторам</a></li></FadeAnimation>
-            </ul>
-            <FadeAnimation><Image src={'/chatiti-logo.svg'} width={110} height={30} alt="Chatiti logo" className="mx-auto" /></FadeAnimation>
-            <FadeAnimation><p className="text-center text-[14px] sm:text-[18px] font-opensans my-8">Разработка: ООО “АСТРА”. Россия, Санкт-Петербург</p></FadeAnimation>
-            <FadeAnimation><p className="text-[9px] font-normal font-opensans text-center">Chatiti© 2024г.<br />Все права защищены</p></FadeAnimation>
-            <FadeAnimation><Image src={'/logo-footer-bg.svg'} width={350} height={350} alt="Logo" className="absolute top-0 left-0" /></FadeAnimation>
+            <div className="relative z-[999]">
+              <ul className="space-y-1 mb-[46px]">
+                <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="/document/privacy#terms">Правовая информация</a></li></FadeAnimation>
+                <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="/document/privacy">Политика конфиденциальности</a></li></FadeAnimation>
+                <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="/document/support">Обратная связь</a></li></FadeAnimation>
+                <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="/document/investors">Соискателям & Инвесторам</a></li></FadeAnimation>
+              </ul>
+              <FadeAnimation><Image src={'/chatiti-logo.svg'} width={110} height={30} alt="Chatiti logo" className="mx-auto" /></FadeAnimation>
+              <FadeAnimation><p className="text-center text-[14px] sm:text-[18px] font-opensans my-8">Разработка: ООО “АСТРА”. Россия, Санкт-Петербург</p></FadeAnimation>
+              <FadeAnimation><p className="text-[9px] font-normal font-opensans text-center">Chatiti© 2024г.<br />Все права защищены</p></FadeAnimation>
+            </div>
+            <FadeAnimation><Image src={'/logo-footer-bg.svg'} width={350} height={350} alt="Logo" className="absolute z-1 top-0 left-0" /></FadeAnimation>
           </div>
         </Container>
       </footer>
