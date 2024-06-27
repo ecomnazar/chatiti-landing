@@ -199,12 +199,12 @@ export default function Home() {
       <footer className="mt-[52px] bg-primary pb-[17px]">
         <Container>
           <div className="max-w-[320px] mx-auto relative pt-[30px]">
-            <div className="relative">
+            <div className="relative z-[20]">
               <ul className="space-y-1 mb-[46px]">
-                <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="/document/privacy#terms">Правовая информация</a></li></FadeAnimation>
-                <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="/document/privacy">Политика конфиденциальности</a></li></FadeAnimation>
-                <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="/document/support">Обратная связь</a></li></FadeAnimation>
-                <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="/document/investors">Соискателям & Инвесторам</a></li></FadeAnimation>
+                <FadeAnimation><a href="document/privacy#terms" className="text-[14px] sm:text-[18px] font-normal font-opensans">Правовая информация</a></FadeAnimation>
+                <FadeAnimation><a href="document/privacy" className="text-[14px] sm:text-[18px] font-normal font-opensans">Политика конфиденциальности</a></FadeAnimation>
+                <FadeAnimation><a href="document/support" className="text-[14px] sm:text-[18px] font-normal font-opensans">Обратная связь</a></FadeAnimation>
+                <FadeAnimation><a href="document/investors" className="text-[14px] sm:text-[18px] font-normal font-opensans">Соискателям & Инвесторам</a></FadeAnimation>
               </ul>
               <FadeAnimation><Image src={'/chatiti-logo.svg'} width={110} height={30} alt="Chatiti logo" className="mx-auto" /></FadeAnimation>
               <FadeAnimation><p className="text-center text-[14px] sm:text-[18px] font-opensans my-8">Разработка: ООО “АСТРА”. Россия, Санкт-Петербург</p></FadeAnimation>
