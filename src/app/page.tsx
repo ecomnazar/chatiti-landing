@@ -163,7 +163,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[20px] lg:gap-x-[76px] gap-y-[15px] sm:gap-y-[30px]">
               {instructors.map((instructor, index) => {
                 return <FadeAnimation key={index}>
-                  <div className="w-auto sm:w-[320px]  mx-auto bg-secondary h-[89px] sm:h-[112px] rounded-[21px] pt-[11px] sm:pt-5 pl-5 pr-[70px] relative overflow-hidden">
+                  <div className="w-[260px] sm:w-[320px]  mx-auto bg-secondary h-[89px] sm:h-[112px] rounded-[21px] pt-[11px] sm:pt-5 pl-5 pr-[70px] relative overflow-hidden">
                     <p className="max-w-[210px] text-[12px] sm:text-[14px] font-normal font-opensans text-[#F4E7D9]">{instructor.description}</p>
                     <div className="w-[140px] h-[19px] bg-primary rounded-t-[10px] absolute bottom-0 left-1/2 -translate-x-1/2 text-[12px] font-semibold font-inter text-secondary flex items-center justify-center">{instructor.role}</div>
                     <div className="w-[63px] h-[112px] absolute -right-[20px] sm:right-0 top-1/2 -translate-y-1/2 sm:translate-y-0 sm:top-0">
@@ -199,7 +199,7 @@ export default function Home() {
       <footer className="mt-[52px] bg-primary pb-[17px]">
         <Container>
           <div className="max-w-[320px] mx-auto relative pt-[30px]">
-            <div className="relative z-[9]">
+            <div className="relative">
               <ul className="space-y-1 mb-[46px]">
                 <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="/document/privacy#terms">Правовая информация</a></li></FadeAnimation>
                 <FadeAnimation><li className="text-[14px] sm:text-[18px] font-normal font-opensans"><a href="/document/privacy">Политика конфиденциальности</a></li></FadeAnimation>
